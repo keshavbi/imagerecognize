@@ -1,0 +1,23 @@
+{% extends 'admin_app/admin_app_base.html' %}
+
+{% block body_block %}
+<div class="jumbotron">
+  <h1>Project Detail Page</h1>
+  <h2>Project details:</h2>
+  <p>Id: {{project_detail.id}}</p>
+  <p>Name: {{project_detail.name}}</p>
+  <p>Manager: {{project_detail.manager}}</p>
+  <p>Location: {{project_detail.location}}</p>
+
+  <h3>Employees:</h3>
+
+  {% for employee in employee_detail.employees.all %}
+  <p>{{employee.name}} who is {{employee.age}} years old.</p>
+  {% endfor %}
+</div>
+
+<div class="container">
+  <p><a class="btn btn-warning" href="{% url 'admin_app:project-update' pk=project_detail.pk %}">Update</a> </p>
+  <p><a class="btn btn-danger" href="{% url 'admin_app:project-delete' pk=project_detail.pk %}">Delete</a> </p>
+</div>
+{% endblock %}

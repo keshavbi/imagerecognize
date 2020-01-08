@@ -1,0 +1,15 @@
+{% extends "admin_app/admin_app_base.html" %}
+
+
+{% block body_block %}
+
+<h1>Welcome to a list of all the schools!</h1>
+<ol>
+<!-- #  Default  for school in school_list  -->
+  {% for project in projects %}
+  <h2><li><a href="{{project.id}}">{{project.name}}</a></li> </h2>
+  <!-- <li><a class="nav-link" href="{% url 'admin_app:project-detail' pk=project.pk %}">Project Detail</a> </li> -->
+  {% endfor %}
+</ol>
+
+{% endblock %}

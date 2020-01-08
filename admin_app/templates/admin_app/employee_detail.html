@@ -1,0 +1,18 @@
+{% extends 'admin_app/admin_app_base.html' %}
+
+{% block body_block %}
+<div class="jumbotron">
+  <h1>Welcom to the Employee Detail Page</h1>
+  <h2>Employee details:</h2>
+  <p>Id: {{employee_detail.id}}</p>
+  <p>Name: {{employee_detail.name}}</p>
+  <p>principal: {{employee_detail.age}}</p>
+  <p>Location: {{employee_detail.project}}</p>
+
+</div>
+
+<div class="container">
+  <p><a class="btn btn-warning" href="{% url 'admin_app:employee-update' pk=employee_detail.pk %}">Update</a> </p>
+  <p><a class="btn btn-danger" href="{% url 'admin_app:employee-delete' pk=employee_detail.pk %}">Delete</a> </p>
+</div>
+{% endblock %}

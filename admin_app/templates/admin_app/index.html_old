@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head style="text-align:center">
+    <meta charset="utf-8">
+    <title>First APP Django</title>
+    <link type="text/css" rel="stylesheet" href="{% static "css/style.css" %}"/>
+  </head>
+  <body  style="text-align:center">
+    <h1> Hi, This is a picture of Django himself! </h1>
+    <img src="{% static "images/djangoguitar.jpeg" %}" alt="Django ">
+    <div class="django">
+
+    </div>
+  </body>
+</html>

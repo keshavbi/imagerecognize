@@ -1,0 +1,13 @@
+{% extends 'formapp/base.html' %}
+
+{% block content %}
+  <!-- <h2>Image Recognization</h2> -->
+  <h1>Welcome to a list of all the Images!</h1>
+  <ol>
+  <!-- #  Default  for school in school_list  -->
+    {% for image in images %}
+    <h2><li><a href="{{image.id}}">{{image.name}}</a></li> </h2>
+    <!-- <li><a class="nav-link" href="{% url 'admin_app:project-detail' pk=project.pk %}">Project Detail</a> </li> -->
+    {% endfor %}
+  </ol>
+{% endblock %}

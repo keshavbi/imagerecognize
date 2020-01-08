@@ -1,0 +1,14 @@
+{% extends "formapp/base.html"%}
+
+
+{% block  body_block %}
+  <!-- <h2>Image Recognization</h2> -->
+  <h1>Welcome to a list of all the Images!</h1>
+  <!-- {{ images }} -->
+  <ol>
+  <!-- #  Default  for school in school_list  -->
+    {% for image in images %}
+    <h2><li><a href="{{image.id}}">{{image.title}}</a></li> </h2>
+    {% endfor %}
+  </ol>
+{% endblock %}

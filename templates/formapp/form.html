@@ -1,0 +1,24 @@
+{% extends "formapp/base.html"%}
+
+{% load static %}
+
+{% block  body_block %}
+<h1>
+
+</h1>
+
+<form class="" method="post" action="" enctype="multipart/form-data">
+  {% csrf_token %}
+
+  {{form.as_p}}
+
+  <input type="submit" class="btn btn-primary" value="Submit">
+</form>
+
+{% if uploaded_file_url %}
+  <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+{% endif %}
+
+<p><a href="{% url 'home' %}">Return to home</a></p>
+
+{% endblock %}
